@@ -12,9 +12,9 @@ const Stack = createNativeStackNavigator();
 function MainTabs(){
     return(
         <Tab.Navigator>
-                <Tab.Screen name="Home" component={Home} />
-                <Tab.Screen name="AddZbir" component={AddZbir} />
-                <Tab.Screen name="Profile" component={Profile} />
+                <Tab.Screen name="Home" component={Home} options={{headerShown: false}}/>
+                <Tab.Screen name="AddZbir" component={AddZbir} options={{headerShown: false}}/>
+                <Tab.Screen name="Profile" component={Profile} options={{headerShown: false}}/>
         </Tab.Navigator>
     )
 }
@@ -23,7 +23,7 @@ export default function App() {
     return (
         <NavigationContainer>
             <Stack.Navigator initialRouteName="MainTabs">
-                <Stack.Screen name="MainTabs" component ={MainTabs} />
+                <Stack.Screen name="MainTabs" component ={MainTabs} options={{headerShown:false}}/>
             </Stack.Navigator>
         </NavigationContainer>
     )
