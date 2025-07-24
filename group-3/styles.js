@@ -1,12 +1,27 @@
-
- import { StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'flex-start',
-    justifyContent: 'center',
-    fontFamily: 'Open Sans',
+    justifyContent: 'center'
+  },
+//в'юшка
+titletext: {
+    textalign: 'left',
+    fontSize: 36,
+  },
+    titleText: { // стилі для заголовків "Довіряй і тд"
+    padding: "7%",
+    margin: "5%", 
+    alignSelf:'center',
+    fontSize: 36,
+  },
+//слоган
+text: {
+    fontFamily: "open-sans",
+    fontSize: 24,
+    margin: 21,
+
   },
   hiContainer: {
     flexDirection: 'row',
@@ -60,22 +75,45 @@ LogInButton: {
     width: 100,
     zIndex: 10,
 },
+
 image: {
     flex: 1,
     resizeMode: 'cover',
     alignItems: 'center',
     justifyContent: 'center',
   },
+Image: {
+    flex: 1,
+    resizeMode: 'cover',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+//рзташування фону
+Button: {
+    backgroundColor: "#f4f4f4",
+    height: 64,
+    width:361,
+    marginBottom: 54,
+    shadowColor: 'black',
+    borderRadius: 10,
+  },
+//кнопки
+Buttontext: {
+    fontSize: 24,
+    alignSelf: "center",
+    margin: "15",
+},
+//текст на кнопках
+shadowProp: {
+    elevation: 15,
+    shadowColor: '#141414',
+},
+//тінь
    scrollView: { 
     flex: 1,
     width: '100%'
   },
-  titleText: { // стилі для заголовків "Довіряй і тд"
-    padding: "7%",
-    margin: "5%", 
-    alignSelf:'center',
-    fontSize: 36,
-  },
+
 
   //topBar: { // Розсташування логотипу
     // flex: 1,
