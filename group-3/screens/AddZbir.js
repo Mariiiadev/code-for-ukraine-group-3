@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
-import { View, ImageBackground,Text, SafeAreaView, StyleSheet, Image, ScrollView, TouchableOpacity, Alert, Switch, Button, TextInput} from 'react-native';
+import { View, ImageBackground,KeyboardAvoidingView, Text, SafeAreaView, StyleSheet, Image, ScrollView, TouchableOpacity, Alert, Switch, Button, TextInput} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { useState } from 'react';
+import {Dropdown} from 'react-native-element-dropdown';
 
 
 import {styles} from '../styles.js';
@@ -22,27 +23,88 @@ function ParaghText(props) {
 function InfoInput (props) {
   const [Text, SetText]=useState("")
   return(
-    <TextInput 
-    value={Text} 
-    onChangeText={SetText}
-    placeholder="Type here.." />
+    <KeyboardAvoidingView>
+      <TextInput
+      value={Text} 
+      onChangeText={SetText}
+      placeholder="" 
+      style={[styles.textInput, {color: 'black', fontSize: 18}]}/>
+    </KeyboardAvoidingView>
   )
 }
 
+const data = [
+        {label: 'Техніка та обладнання', value: '1'},
+        {label: 'Медична допомога', value: '2'},
+        {label: 'Підтримка військових', value: '3'},
+    ];
+
+    const DropdownScreen = _props => {
+        const [dropdown, setDropdown] = useState(null);
+        const _renderItem = item => {
+            return (
+            <View style={styles.item}>
+                <Text style={styles.textItem}>{item.label}</Text>
+            </View>
+            );
+        };
+        return (
+            <View style={styles.container}>
+                <Dropdown
+                    style={styles.dropdown}
+                    data={data}
+                    search
+                    searchPlaceholder="Пошук"
+                    labelField="label"
+                    valueField="value"
+                    placeholder="Оберіть категорію збору"
+                    value={dropdown}
+                    onChange={item => {
+                    setDropdown(item.value);
+                        console.log('selected', item);
+                    }}
+                    renderItem={item => _renderItem(item)}
+                />
+            </View>
+        );
+    };
 
 export default function AddZdir () {
+  const [Description, SetDescription]=useState("")
   return (
-    <View style={styles.container}>
+    <View style={styles.AddZbircontainer}>
       <ImageBackground source = {require('../assets/background.png')} style={styles.backgroundPic}>
-        <ScrollView style={styles.scrollView} >
+        <ScrollView style={styles.scrollView} contentContainerStyle={{borderRadius: 30, overflow: 'hidden'}}>
+          <View style={styles.AddZbirTitle} >
             <TitleText title={"Додати збір"} />
-            <Image source={require("../assets/addPicture.webp")} style={styles.addPicture} />
-            <ParaghText content={"Додати зображення"} />
+          </View>
+          <View style={styles.ImagePicker}> 
+            <Image source={require("../assets/addPicture.webp")} style={styles.addImage} />
+          </View>
+          <KeyboardAvoidingView style={styles.TextInputsContainer} behavior="padding" enabled>
+            <ParaghText content={"Назва збору:"} />
             <InfoInput />
-            <ParaghText content={"Назва збору"} />
+            <View style={styles.dropdownContainer}>
+              <DropdownScreen />
+            </View>  
+            <ParaghText content={"Опис:"} />
+            <TextInput 
+            value={Description} 
+            onChangeText={SetDescription}
+            placeholder="" 
+            style={[styles.DescriptionTextInput, 
+            {color: 'black', fontSize: 18}]}
+            multiline
+            numberOfLines={4}
+            />
+            <ParaghText content={"Посилання на банку:"} />
             <InfoInput />
-            <ParaghText content={"Категорія збору"} />
-            <InfoInput />
+            <View style={styles.addZbirButtonContainer}>
+              <TouchableOpacity style={styles.addZbirButton}>
+                <Text style={[styles.buttonText]}>Створити збір</Text>
+              </TouchableOpacity>
+            </View>
+          </KeyboardAvoidingView>
         </ScrollView>  
       </ImageBackground>
       <StatusBar style="auto" />
