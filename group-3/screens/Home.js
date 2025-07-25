@@ -1,36 +1,30 @@
 import { StatusBar } from 'expo-status-bar';
-import { View, Text, SafeAreaView, StyleSheet, Image, ScrollView, TouchableOpacity, Alert, Switch, Button, TextInput} from 'react-native';
+import { View, Text, SafeAreaView, Image, ImageBackground, ScrollView, TouchableOpacity, Alert, Switch, Button, TextInput} from 'react-native';
+import { RadialGradient } from 'react-native-gradients';
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { useState } from 'react';
-
+import { styles } from "../styles"
 
 function TitleText(props) {
   return (
-    <Text>{props.title}</Text>
+    <Text style={styles.titletext}>{props.title}</Text>
   ) 
 }
 
-export default function App () {
+export default function Home () {
   return (
+    <ImageBackground source={require('../assets/background.png')} style={styles.Image}>
     <View style={styles.container}>
-      <Text>Hello there is a Home page</Text>
-      <TitleText title={"Home"}/>
-      <StatusBar style="auto" />
+      <TitleText  title={"Довіряй."}/>
+      <TitleText  title={"Допомагай."}/>
+      <TitleText  title={"Донать."}/>
+      <Text style={styles.text}>Куди спрямуємо допомогу?</Text>
+      <StatusBar hidden={true} />
+      <TouchableOpacity style={[styles.Button, styles.shadowProp]}><Text style={styles.Buttontext}>Техніка та обладнання</Text></TouchableOpacity>
+      <TouchableOpacity style={[styles.Button, styles.shadowProp]}><Text style={styles.Buttontext}>Медична допомога</Text></TouchableOpacity>
+      <TouchableOpacity style={[styles.Button, styles.shadowProp]}><Text style={styles.Buttontext}>Підтримка військових</Text></TouchableOpacity>
     </View>
+    </ImageBackground>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    // стилі для заголовка Довіряй. Допомагай. Донать
-  }
-
-
-});

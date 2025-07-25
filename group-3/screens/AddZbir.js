@@ -1,36 +1,112 @@
 import { StatusBar } from 'expo-status-bar';
-import { View, Text, SafeAreaView, StyleSheet, Image, ScrollView, TouchableOpacity, Alert, Switch, Button, TextInput} from 'react-native';
+import { View, ImageBackground,KeyboardAvoidingView, Text, SafeAreaView, StyleSheet, Image, ScrollView, TouchableOpacity, Alert, Switch, Button, TextInput} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { useState } from 'react';
+import {Dropdown} from 'react-native-element-dropdown';
 
+import {styles} from '../styles.js';
 
 function TitleText(props) {
   return (
-    <Text>{props.title}</Text>
+    <Text style={styles.titleText}>{props.title}</Text>
   ) 
+};
+
+function ParaghText(props) {
+  return (
+    <Text style={styles.paragraph}>{props.content}</Text>
+  )
+};
+
+function InfoInput (props) {
+  const [Text, SetText]=useState("")
+  return(
+    <KeyboardAvoidingView>
+      <TextInput
+      value={Text} 
+      onChangeText={SetText}
+      placeholder="" 
+      style={[styles.textInput, {color: 'black', fontSize: 18}]}/>
+    </KeyboardAvoidingView>
+  )
 }
 
-export default function App () {
+const data = [
+        {label: 'Техніка та обладнання', value: '1'},
+        {label: 'Медична допомога', value: '2'},
+        {label: 'Підтримка військових', value: '3'},
+    ];
+
+    const DropdownScreen = _props => {
+        const [dropdown, setDropdown] = useState(null);
+        const _renderItem = item => {
+            return (
+            <View style={styles.item}>
+                <Text style={styles.textItem}>{item.label}</Text>
+            </View>
+            );
+        };
+        return (
+            <View style={styles.container}>
+                <Dropdown
+                    style={styles.dropdown}
+                    data={data}
+                    search
+                    searchPlaceholder="Пошук"
+                    labelField="label"
+                    valueField="value"
+                    placeholder="Оберіть категорію збору"
+                    value={dropdown}
+                    onChange={item => {
+                    setDropdown(item.value);
+                        console.log('selected', item);
+                    }}
+                    renderItem={item => _renderItem(item)}
+                />
+            </View>
+        );
+    };
+
+export default function AddZdir () {
+  const [Description, SetDescription]=useState("")
   return (
-    <View style={styles.container}>
-      <Text>Hello there is an AddZbir</Text>
-      <TitleText title={"AddZbir"}/>
+    <View style={styles.AddZbircontainer}>
+      <ImageBackground source = {require('../assets/background.png')} style={styles.backgroundPic}>
+        <ScrollView style={styles.scrollView} contentContainerStyle={{borderRadius: 30, overflow: 'hidden'}}>
+          <View style={styles.AddZbirTitle} >
+            <TitleText title={"Додати збір"} />
+          </View>
+          <View style={styles.ImagePicker}> 
+            <Image source={require("../assets/addPicture.webp")} style={styles.addImage} />
+          </View>
+          <KeyboardAvoidingView style={styles.TextInputsContainer} behavior="padding" enabled>
+            <ParaghText content={"Назва збору:"} />
+            <InfoInput />
+            <View style={styles.dropdownContainer}>
+              <DropdownScreen />
+            </View>  
+            <ParaghText content={"Опис:"} />
+            <TextInput 
+            value={Description} 
+            onChangeText={SetDescription}
+            placeholder="" 
+            style={[styles.DescriptionTextInput, 
+            {color: 'black', fontSize: 18}]}
+            multiline
+            numberOfLines={4}
+            />
+            <ParaghText content={"Посилання на банку:"} />
+            <InfoInput />
+            <View style={styles.addZbirButtonContainer}>
+              <TouchableOpacity style={styles.addZbirButton}>
+                <Text style={[styles.buttonText]}>Створити збір</Text>
+              </TouchableOpacity>
+            </View>
+          </KeyboardAvoidingView>
+        </ScrollView>  
+      </ImageBackground>
       <StatusBar style="auto" />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    // стилі для заголовка Довіряй. Допомагай. Донать
-  }
-
-
-});
