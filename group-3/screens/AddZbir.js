@@ -5,7 +5,6 @@ import React from 'react';
 import { useState } from 'react';
 import {Dropdown} from 'react-native-element-dropdown';
 
-
 import {styles} from '../styles.js';
 
 function TitleText(props) {
@@ -111,4 +110,3 @@ export default function AddZdir () {
     </View>
   );
 }
-
