@@ -131,10 +131,9 @@ shadowProp: {
    scrollView: { 
     flex: 1,
     width: '100%',
-    marginTop: 100,
-    marginBottom: 60,
+    marginTop: 120,
+    marginBottom: 100,
     borderRadius: 30, 
-    overflow: 'hidden',
   },
   titleText: { // стилі для заголовків "Довіряй і тд"
     alignSelf:'center',
@@ -149,7 +148,9 @@ shadowProp: {
     width: "100%",
   },
   paragraph: { // regular text
-    padding: 0,
+    paddingHorizontal: 10,
+    alignSelf: 'flex-start',
+    fontSize: 18,
   },
   addImage: {
     width: 200,
@@ -169,7 +170,9 @@ shadowProp: {
     marginBottom: 10,
   },
   TextInputsContainer: {
-    marginHorizontal: 40,    
+    marginHorizontal: 40,
+    alignItems: 'center',
+    textAlign: 'left',
   },
   textInput: {
     width: 300,
@@ -237,7 +240,7 @@ shadowProp: {
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: 60,
-    marginTop: 10
+    marginVertical: 50,
   },
   addZbirButton: {
     backgroundColor: '#2176AE',

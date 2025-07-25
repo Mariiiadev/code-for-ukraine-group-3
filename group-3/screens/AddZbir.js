@@ -70,17 +70,20 @@ const data = [
 
 export default function AddZdir () {
   const [Description, SetDescription]=useState("")
+  const navigation = useNavigation();
+ 
   return (
     <View style={styles.AddZbircontainer}>
-      <ImageBackground source = {require('../assets/background.png')} style={styles.backgroundPic}>
-        <ScrollView style={styles.scrollView} contentContainerStyle={{borderRadius: 30, overflow: 'hidden'}}>
+     <View>
+      <ImageBackground source = {require('../assets/background.png')} style={styles.backgroundPic}> 
+        <ScrollView style={styles.scrollView} >
           <View style={styles.AddZbirTitle} >
-            <TitleText title={"Додати збір"} />
-          </View>
+            <TitleText title={"Створити збір"} />
+          </View>       
           <View style={styles.ImagePicker}> 
             <Image source={require("../assets/addPicture.webp")} style={styles.addImage} />
           </View>
-          <KeyboardAvoidingView style={styles.TextInputsContainer} behavior="padding" enabled>
+          <View style={styles.TextInputsContainer} >
             <ParaghText content={"Назва збору:"} />
             <InfoInput />
             <View style={styles.dropdownContainer}>
@@ -90,7 +93,7 @@ export default function AddZdir () {
             <TextInput 
             value={Description} 
             onChangeText={SetDescription}
-            placeholder="" 
+            placeholder=""  
             style={[styles.DescriptionTextInput, 
             {color: 'black', fontSize: 18}]}
             multiline
@@ -99,13 +102,17 @@ export default function AddZdir () {
             <ParaghText content={"Посилання на банку:"} />
             <InfoInput />
             <View style={styles.addZbirButtonContainer}>
-              <TouchableOpacity style={styles.addZbirButton}>
+              <TouchableOpacity 
+              onPress={() => {
+              navigation.navigate("Home")}}
+              style={styles.addZbirButton}>
                 <Text style={[styles.buttonText]}>Створити збір</Text>
               </TouchableOpacity>
             </View>
-          </KeyboardAvoidingView>
+          </View>
         </ScrollView>  
       </ImageBackground>
+      </View>
       <StatusBar style="auto" />
     </View>
   );
