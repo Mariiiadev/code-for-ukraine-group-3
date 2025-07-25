@@ -3,7 +3,10 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center'
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+    fontFamily: 'Open Sans',
+    flexDirection: 'column',
   },
 //в'юшка
 titletext: {
@@ -21,8 +24,9 @@ text: {
     fontFamily: "open-sans",
     fontSize: 24,
     margin: 21,
-
   },
+
+// login sign up pages
   hiContainer: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -52,6 +56,7 @@ text: {
     borderRadius: 20,
     backgroundColor: '#ffffffff',
   },
+
   StartButton: {
     padding: 10,
     alignItems: 'center',
@@ -76,7 +81,21 @@ LogInButton: {
     zIndex: 10,
 },
 
-image: {
+//addZbir page
+  AddZbircontainer: {
+    flex: 1,
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+    fontFamily: 'Open Sans',
+    flexDirection: 'column',
+    overflow: 'hidden'
+
+  },
+  hiText: {
+  fontSize: 24, 
+  fontWeight: '5dv00'
+  },
+  image: {
     flex: 1,
     resizeMode: 'cover',
     alignItems: 'center',
@@ -111,23 +130,15 @@ shadowProp: {
 //тінь
    scrollView: { 
     flex: 1,
-    width: '100%'
+    width: '100%',
+    marginTop: 100,
+    marginBottom: 60,
+    borderRadius: 30, 
+    overflow: 'hidden',
   },
-
-
-  //topBar: { // Розсташування логотипу
-    // flex: 1,
-    // justifyContent: 'space-between',
-    // flexDirection:'column',
-    // padding: '4%',
-    // marginTop: '4%',
-    // marginLeft: '2%',
-
-  // },
-  mainView: { //розсташування основних об'єктів у полі
-    flex: 3,
-    margin: 50,
-    justifyContent: "space-around"
+  titleText: { // стилі для заголовків "Довіряй і тд"
+    alignSelf:'center',
+    fontSize: 36,
   },
   backgroundPic: { // градієнт бекграунд
     flex: 1,
@@ -137,16 +148,108 @@ shadowProp: {
     height:"105%",
     width: "100%",
   },
-  logoImage:{
-    width: "13%",
-    height: "250%",
-    alignSelf: 'flex-end',
-  },
   paragraph: { // regular text
-    
+    padding: 0,
   },
-  addPicture: {
-    width: '50%',
-    height: '40%',
+  addImage: {
+    width: 200,
+    height: 200,
     alignSelf: 'center',
-}});
+    backgroundColor: 'white',
+    borderRadius: 15,
+    borderBottomColor: 'grey',
+  },
+  AddZbirTitle: {
+    paddingTop: 10,
+    marginBottom: 10,
+    alignSelf: "center",
+    paddingBottom: 1,
+  },
+  ImagePicker: {
+    marginBottom: 10,
+  },
+  TextInputsContainer: {
+    marginHorizontal: 40,    
+  },
+  textInput: {
+    width: 300,
+    height: 40,
+    marginTop: 10,
+    marginBottom: 10,
+    borderWidth: 1,
+    borderColor: '#ccc',
+    paddingHorizontal: 10,
+    borderRadius: 20,
+    backgroundColor: '#ffffffff',
+  },
+
+  // drop down styles
+  dropdownContainer: {
+    flex: 1,
+    padding: 0,
+    marginTop: 30,
+    marginBottom: 40,
+  },
+  dropdown: {
+    backgroundColor: 'white',
+    borderBottomColor: 'gray',
+    borderBottomWidth: 0.5,
+    marginTop: 20,
+    paddingBottom: 20,
+    borderRadius: 15,
+    width: 300,
+    height: 40,
+    paddingHorizontal: 10,
+  },
+  item: {
+    paddingVertical: 17,
+    paddingHorizontal: 4,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  textItem: {
+    flex: 1,
+    fontSize: 16,
+    alignSelf: 'flex-start',
+        },
+  DescriptionTextInput: {
+    height: 100,
+    width: 300,
+    marginTop: 10,
+    marginBottom: 10,
+    borderWidth: 1,
+    borderColor: '#ccc',
+    paddingHorizontal: 10,
+    borderRadius: 20,
+    backgroundColor: '#ffffffff',
+    paddingVertical: 10,
+    textAlign: 'left',
+    alignItems: "stretch",
+    borderColor: '#ddd',
+    borderWidth: 1,
+    padding: 10,
+    marginBottom: 16,
+    fontSize: 16,
+  },
+  addZbirButtonContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 60,
+    marginTop: 10
+  },
+  addZbirButton: {
+    backgroundColor: '#2176AE',
+    borderRadius: 20,
+    height: 50,
+    minWidth: 150,
+    justifyContent: 'space-around',
+    alignItems: 'center'
+  },
+  buttonText: {
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: 18
+  },
+});
