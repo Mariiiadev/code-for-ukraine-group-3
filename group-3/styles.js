@@ -161,7 +161,7 @@ shadowProp: {
     justifyContent: "center",
     alignItems: "center",
     resizeMode: "cover",
-    height:"105%",
+    height:"100%",
     width: "100%",
   },
   paragraph: { // regular text
