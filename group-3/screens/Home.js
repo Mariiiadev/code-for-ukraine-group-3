@@ -15,7 +15,7 @@ function TitleText(props) {
 export default function Home () {
   const navigation = useNavigation();
   return (
-    <ImageBackground source={require('../assets/backgroundlogin.png')} style={styles.backgroundPic}>
+    <ImageBackground source={require('../assets/background.png')} style={styles.backgroundPic}>
     <View style={styles.container}>
       <TitleText  title={"Довіряй."}/>
       <TitleText  title={"Допомагай."}/>

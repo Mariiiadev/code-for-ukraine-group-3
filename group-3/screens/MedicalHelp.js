@@ -23,7 +23,7 @@ export default function MedicalHelp() {
     const alert = Alert;
     const navigation = useNavigation();
     return (
-        <ImageBackground source={require('../assets/backgroundlogin.png')} style={styles.image}>
+        <ImageBackground source={require('../assets/background.png')} style={styles.image}>
         <View style={styles.container}>
             <View style={styles.medContainer}>
             <Text style={[styles.medText, { fontSize: 30, fontWeight: '500' }]}>Медична Допомога</Text>
