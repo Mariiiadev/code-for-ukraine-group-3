@@ -12,6 +12,7 @@ import Profile from "./screens/Profile";
 import AddZbir from "./screens/AddZbir";
 import LogIn from "./screens/LogIn";
 import SignUp from "./screens/SignUp";
+import MedicalHelp from "./screens/MedicalHelp";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -81,6 +82,7 @@ export default function App() {
       <StatusBar hidden={true} />
             <Stack.Navigator initialRouteName="LogIn" screenOptions={{ headerShown: false }}>
               <Stack.Screen name="SignUp" component={SignUp} />
+              <Stack.Screen name="MedicalHelp" component={MedicalHelp} />
               <Stack.Screen name="LogIn" component={LogIn} />
               <Stack.Screen name="MainTabs" component ={MainTabs} />
             </Stack.Navigator>

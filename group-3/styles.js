@@ -2,7 +2,24 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
+    height: '100%',
     flex: 1,
+    justifyContent: 'center'
+  },
+//в'юшка
+titletext: {
+    textalign: 'left',
+    fontSize: 36,
+  },
+//слоган
+text: {
+    fontFamily: "open-sans",
+    fontSize: 24,
+    margin: 21,
+
+  },
+//текст під слоганом
+Image: {
     alignItems: 'flex-start',
     justifyContent: 'center',
     fontFamily: 'Open Sans',
@@ -44,7 +61,6 @@ text: {
     marginTop: 10,
     marginBottom: 10,
 },
-  
   loginbar: {
     width: 250,
     height: 40,
@@ -120,7 +136,7 @@ Button: {
 Buttontext: {
     fontSize: 24,
     alignSelf: "center",
-    margin: "15",
+    margin: 15,
 },
 //текст на кнопках
 shadowProp: {
@@ -251,5 +267,47 @@ shadowProp: {
     color: '#fff',
     fontWeight: 'bold',
     fontSize: 18
+  },
+// Medical Help styles
+medContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 110,
+  },
+  scrollViewMedicalContent: {
+    width: 370,
+    height: '70',
+  },
+  medInfoContainer: {
+    padding: 20,
+    backgroundColor: '#efeeeeff',
+    borderRadius: 20,
+    margin: 25,
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
+    shadowColor: '#141414',
+    elevation: 15,
+  },
+  medImage: {
+    width: '40%',
+    height: 120,
+    borderRadius: 10,
+    marginBottom: 10,
+    marginRight: 10, 
+  },
+  medInfoTextContainer: {
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+  },
+  medInfoText: {
+    flex: 1,
+    color: 'black',
+    fontSize: 16,
+    fontWeight: '500',
+    margin: 5,
+    padding: 1,
+    flexShrink: 1,
+    flexWrap: 'wrap',
   },
 });
