@@ -70,10 +70,13 @@ const data = [
 
 export default function AddZdir () {
   const [Description, SetDescription]=useState("")
+  const navigation = useNavigation();
+ 
   return (
     <View style={styles.AddZbircontainer}>
-      <ImageBackground source = {require('../assets/background.png')} style={styles.backgroundPic}>
-        <ScrollView style={styles.scrollView} contentContainerStyle={{borderRadius: 30, overflow: 'hidden'}}>
+     <View>
+      <ImageBackground source = {require('../assets/background.png')} style={styles.backgroundPic}> 
+        <ScrollView style={styles.scrollView} >
           <View style={styles.AddZbirTitle} >
             <TitleText title={"Add zbir"} />
           </View>
@@ -90,7 +93,7 @@ export default function AddZdir () {
             <TextInput 
             value={Description} 
             onChangeText={SetDescription}
-            placeholder="" 
+            placeholder=""  
             style={[styles.DescriptionTextInput, 
             {color: 'black', fontSize: 18}]}
             multiline
@@ -99,13 +102,17 @@ export default function AddZdir () {
             <ParaghText content={"Link to the bank:"} />
             <InfoInput />
             <View style={styles.addZbirButtonContainer}>
-              <TouchableOpacity style={styles.addZbirButton}>
+              <TouchableOpacity 
+              onPress={() => {
+              navigation.navigate("Home")}}
+              style={styles.addZbirButton}>
                 <Text style={[styles.buttonText]}>Створити збір</Text>
               </TouchableOpacity>
             </View>
-          </KeyboardAvoidingView>
+          </View>
         </ScrollView>  
       </ImageBackground>
+      </View>
       <StatusBar style="auto" />
     </View>
   );
