@@ -89,6 +89,8 @@ export default function AddZdir () {
             <View style={styles.dropdownContainer}>
               <DropdownScreen />
             </View>  
+            <ParaghText content={"Сума збору:"} />
+            <InfoInput />
             <ParaghText content={"Опис:"} />
             <TextInput 
             value={Description} 

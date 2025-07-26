@@ -148,7 +148,7 @@ shadowProp: {
     width: "100%",
   },
   paragraph: { // regular text
-    paddingHorizontal: 10,
+    paddingHorizontal: 0,
     alignSelf: 'flex-start',
     fontSize: 18,
   },
@@ -254,5 +254,54 @@ shadowProp: {
     color: '#fff',
     fontWeight: 'bold',
     fontSize: 18
+  },
+
+
+  // ZbirInfo page
+  ZbirInfoTitle:
+{
+    paddingTop: 10,
+    paddingHorizontal: 40,
+    marginBottom: 10,
+    alignSelf: "center",
+    paddingBottom: 1,
+},
+  ImgTextContainer:{
+    flex: 1, 
+    flexDirection: 'row',
+    justifyContent:'space-between',
+    marginHorizontal: 10, 
+  },
+  TextContainer1:{
+      flex: 1,
+      flexDirection: 'column',
+      justifyContent: 'flex-start'
+  },
+  AuthZbir: {
+  },
+  BoldTitle:{
+    fontSize: 18,
+    fontWeight: 'bold',
+
+  },
+  Category: {
+    marginVertical: 13,
+  },
+  Zbiraim: {
+    
+  },
+  ZbirInfoImg: {
+    borderRadius: 15,
+    width: 200,
+    height: 200,
+  },
+  OtherTextCont: {
+    marginHorizontal: 30,
+  },
+  DescrCont:{
+    marginBottom: 10,
+  },
+  ZbirLinkCont: {
+
   },
 });
