@@ -12,6 +12,7 @@ import Profile from "./screens/Profile";
 import AddZbir from "./screens/AddZbir";
 import LogIn from "./screens/LogIn";
 import SignUp from "./screens/SignUp";
+import ZbirInfo from "./screens/ZbirInfo";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -59,14 +60,12 @@ function MainTabs() {
 }
 
 export default function App() {
-  // Завантаження шрифтів
   const [fontsLoaded] = useFonts({
     OpenSans_400Regular,
     OpenSans_600SemiBold,
     OpenSans_700Bold,
   });
 
-  // Показуємо індикатор завантаження поки шрифти не завантажились
   if (!fontsLoaded) {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -83,6 +82,7 @@ export default function App() {
               <Stack.Screen name="SignUp" component={SignUp} />
               <Stack.Screen name="LogIn" component={LogIn} />
               <Stack.Screen name="MainTabs" component ={MainTabs} />
+              <Stack.Screen name="ZbirInfo" component={ZbirInfo} />
             </Stack.Navigator>
     </NavigationContainer>
   );
