@@ -15,19 +15,26 @@ function TitleText(props) {
 export default function Home () {
   const navigation = useNavigation();
   return (
-    <ImageBackground source={require('../assets/background.png')} style={styles.Image}>
+    <ImageBackground source={require('../assets/background.png')} style={styles.backgroundPic}>
     <View style={styles.container}>
       <TitleText  title={"Довіряй."}/>
       <TitleText  title={"Допомагай."}/>
       <TitleText  title={"Донать."}/>
       <Text style={styles.text}>Куди спрямуємо допомогу?</Text>
       <StatusBar hidden={true} />
-      <TouchableOpacity style={[styles.Button, styles.shadowProp]}><Text style={styles.Buttontext}>Техніка та обладнання</Text></TouchableOpacity>
-      <TouchableOpacity 
-      onPress={() => {
-      navigation.navigate("")}}
+      <TouchableOpacity
+      onPress={ () => {
+      navigation.navigate("Tech")}}
+      style={[styles.Button, styles.shadowProp]}><Text style={styles.Buttontext}>Техніка та обладнання</Text></TouchableOpacity>
+      <TouchableOpacity
+      onPress={ () => {
+      navigation.navigate("MedicalHelp")}}
       style={[styles.Button, styles.shadowProp]}><Text style={styles.Buttontext}>Медична допомога</Text></TouchableOpacity>
-      <TouchableOpacity style={[styles.Button, styles.shadowProp]}><Text style={styles.Buttontext}>Підтримка військових</Text></TouchableOpacity>
+      <TouchableOpacity
+      onPress={ () => {
+      navigation.navigate("SoldiersHelp")}}
+      style={[styles.Button, styles.shadowProp]}><Text style={styles.Buttontext}>Підтримка військових</Text></TouchableOpacity>
+
     </View>
     </ImageBackground>
   );
