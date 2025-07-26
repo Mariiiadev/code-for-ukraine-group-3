@@ -9,7 +9,15 @@ export default function Tech() {
     const alert = Alert;
     const navigation = useNavigation();
     return (
-        <ImageBackground source={require('../assets/background.png')} style={styles.image}>
+        <ImageBackground source={require('../assets/background.png')} style={styles.image}> 
+              <View style={styles.backButtonCont}>
+                <TouchableOpacity style={styles.backButton}
+                onPress={() => { 
+                navigation.goBack();
+                }}>
+                  <Image source = {require('../assets/backButton.png.png')} style={styles.backButtonImg} />
+                </TouchableOpacity>
+              </View>
         <View style={styles.container}>
             <View style={styles.medContainer}>
             <Text style={[styles.medText, { fontSize: 30, fontWeight: '500' }]}>Техніка та обладнання</Text>
@@ -17,15 +25,15 @@ export default function Tech() {
             <ScrollView style={styles.scrollViewMedicalContent}>
                 <TouchableOpacity
                 onPress={() => {
-                    alert.alert('This is a medical help item!');
+                navigation.navigate("ZbirInfo")
                 }}>
         <View style={styles.medInfoContainer}>
         <View style={styles.imagandtextContainer}>
                     <Image source={require('../assets/zbir3.1.png')} style={styles.medImage} />
                     <View style={styles.medInfoTextContainer}>
                     <Text style={[styles.medInfoText, { fontWeight: '800' }]}> Грім для ворогів </Text>
-                    <Text style={styles.medInfoText}> Автор: БО "Крила"</Text>
-                    <Text style={styles.medInfoText}> Сума: 100 000 грн</Text>
+                    <Text style={styles.medInfoText}> Автор: Ганна Бун</Text>
+                    <Text style={styles.medInfoText}> Сума: 7 000 грн</Text>
                     </View>
                     </View>
                 <Image source={require('../assets/progresbar48.png')} style={styles.progressbar} />
@@ -36,7 +44,7 @@ export default function Tech() {
                             <View style={styles.medInfoTextContainer}>
                             <Text style={[styles.medInfoText, { fontWeight: '800' }]}> Ремонт авто </Text>
                             <Text style={styles.medInfoText}> Автор: БО "Крила"</Text>
-                            <Text style={styles.medInfoText}> Сума: 100 000 грн</Text>
+                            <Text style={styles.medInfoText}> Сума: 10 000 грн</Text>
                             </View>
                             </View>
                 <Image source={require('../assets/progresbar0.png')} style={styles.progressbar} />
