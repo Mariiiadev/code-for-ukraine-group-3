@@ -34,6 +34,7 @@ export default function Home () {
       onPress={ () => {
       navigation.navigate("SoldiersHelp")}}
       style={[styles.Button, styles.shadowProp]}><Text style={styles.Buttontext}>Підтримка військових</Text></TouchableOpacity>
+
     </View>
     </ImageBackground>
   );
