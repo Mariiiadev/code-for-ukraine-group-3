@@ -14,7 +14,7 @@ export default function LogIn () {
     <ImageBackground source={require('../assets/LogIn.png')} style={styles.backgroundPic}>
     <View style={styles.container}>
     <View style={styles.hiContainer}>
-      <Text style={[styles.hiText, { fontSize: 24, fontWeight: '5dv00'}]}  >Вітаємо!</Text>
+      <Text style={[styles.hiText, { fontSize: 24, fontWeight: '5dv00'}]}  >Welcome!</Text>
       <Image
         style={styles.logo}
         source={require('../assets/logo.png')}/>
@@ -30,13 +30,13 @@ export default function LogIn () {
          onChangeText={setEmail}
          placeholder={"Прізвище"}>
         </TextInput> */}
-        <Text style={[styles.login, {color: 'white', fontSize: 18}]}>Електронна адреса:</Text>
+        <Text style={[styles.login, {color: 'white', fontSize: 18}]}>Email:</Text>
         <TextInput style={styles.loginbar}
          value={email}
          onChangeText={setEmail}
          placeholder={""}>
         </TextInput>
-        <Text style={[styles.login, {color: 'white', fontSize: 18}]}>Пароль:</Text>
+        <Text style={[styles.login, {color: 'white', fontSize: 18}]}>Password:</Text>
         <TextInput style={styles.loginbar}
          value={password}
          onChangeText={setPassword}
@@ -49,9 +49,9 @@ export default function LogIn () {
                 }}
                 style={[styles.StartButton, { backgroundColor: '#F7C051', marginTop: 10 }]}
               >
-              <Text style={{ color: 'black', fontSize: 16, fontWeight: '600'}}>Далі</Text>
+              <Text style={{ color: 'black', fontSize: 16, fontWeight: '600'}}>Next</Text>
               </TouchableOpacity>
-      <Text style={[styles.signupText, { fontSize: 17 }]}> Ще не маєте акаунту?</Text>
+      <Text style={[styles.signupText, { fontSize: 17 }]}> Don't have an account yet?</Text>
       <TouchableOpacity
         onPress={() => { 
           Keyboard.dismiss();

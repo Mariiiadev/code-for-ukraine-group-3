@@ -33,9 +33,9 @@ function InfoInput (props) {
 }
 
 const data = [
-        {label: 'Техніка та обладнання', value: '1'},
-        {label: 'Медична допомога', value: '2'},
-        {label: 'Підтримка військових', value: '3'},
+        {label: 'Technique and equipment', value: '1'},
+        {label: 'Medical help', value: '2'},
+        {label: 'Support for the military', value: '3'},
     ];
 
     const DropdownScreen = _props => {
@@ -53,10 +53,10 @@ const data = [
                     style={styles.dropdown}
                     data={data}
                     search
-                    searchPlaceholder="Пошук"
+                    searchPlaceholder="Search"
                     labelField="label"
                     valueField="value"
-                    placeholder="Оберіть категорію збору"
+                    placeholder="Select a category fundraising"
                     value={dropdown}
                     onChange={item => {
                     setDropdown(item.value);
@@ -76,22 +76,20 @@ export default function AddZdir () {
     <View style={styles.AddZbircontainer}>
      <View>
       <ImageBackground source = {require('../assets/background.png')} style={styles.backgroundPic}> 
-        <ScrollView style={styles.scrollView2} >
-          <View style={styles.AddZbirTitle2} >
-            <TitleText title={"Створити збір"} />
-          </View>       
+        <ScrollView style={styles.scrollView} >
+          <View style={styles.AddZbirTitle} >
+            <TitleText title={"Add zbir"} />
+          </View>
           <View style={styles.ImagePicker}> 
             <Image source={require("../assets/addPicture.webp")} style={styles.addImage} />
           </View>
-          <View style={styles.TextInputsContainer} >
-            <ParaghText content={"Назва збору:"} />
+          <KeyboardAvoidingView style={styles.TextInputsContainer} behavior="padding" enabled>
+            <ParaghText content={"Zbir name:"} />
             <InfoInput />
             <View style={styles.dropdownContainer}>
               <DropdownScreen />
             </View>  
-            <ParaghText content={"Сума збору:"} />
-            <InfoInput />
-            <ParaghText content={"Опис:"} />
+            <ParaghText content={"Description:"} />
             <TextInput 
             value={Description} 
             onChangeText={SetDescription}
@@ -101,7 +99,7 @@ export default function AddZdir () {
             multiline
             numberOfLines={4}
             />
-            <ParaghText content={"Посилання на банку:"} />
+            <ParaghText content={"Link to the bank:"} />
             <InfoInput />
             <View style={styles.addZbirButtonContainer}>
               <TouchableOpacity 

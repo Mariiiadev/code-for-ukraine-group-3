@@ -8,8 +8,8 @@ const { width } = Dimensions.get('window');
 export default function ProfileScreen() {
   const handleMyFundraisings = () => {
     Alert.alert(
-      "Мої збори",
-      "Тут буде відображено список всіх ваших зборів",
+      "My fundraisings",
+      "A list of all your fees will be displayed here",
       [
         { text: "ОК", style: "default" }
       ]
@@ -18,7 +18,7 @@ export default function ProfileScreen() {
 
   const handleFundraisingReport = () => {
     Alert.alert(
-      "Звіт зборів",
+      "Report fundrasings",
       "Тут буде відображено детальний звіт по всіх зборах",
       [
         { text: "ОК", style: "default" }
@@ -39,29 +39,29 @@ export default function ProfileScreen() {
       </View>
 
       <View style={styles.infoSection}>
-        <Text style={styles.nameText}>Ім'я та прізвище</Text>
+        <Text style={styles.nameText}>Name and Surname</Text>
 
         <View style={styles.statsContainer}>
           <View style={styles.statItem}>
             <FontAwesome name="handshake-o" size={23} color="black" />
             <Text style={styles.statNumber}>7</Text>
-            <Text style={styles.statLabel}>Завершено зборів</Text>
+            <Text style={styles.statLabel}>Fundraisings is complete</Text>
           </View>
 
           <View style={styles.statItem}>
             <Text style={{ fontSize: 20, color: 'black' }}>₴</Text>
 
             <Text style={styles.statNumber}>7 568</Text>
-            <Text style={styles.statLabel}>Гривень заданочено</Text>
+            <Text style={styles.statLabel}>Hryvnia zadanocheno</Text>
           </View>
         </View>
 
         <TouchableOpacity style={styles.button} onPress={handleMyFundraisings}>
-          <Text style={styles.buttonText}>Мої збори</Text>
+          <Text style={styles.buttonText}>My fundraisings</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.button} onPress={handleFundraisingReport}>
-          <Text style={styles.buttonText}>Звіт зборів</Text>
+          <Text style={styles.buttonText}>Report of fundrasings</Text>
         </TouchableOpacity>
       </View>
     </ImageBackground>
