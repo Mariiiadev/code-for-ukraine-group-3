@@ -16,7 +16,6 @@ text: {
     fontFamily: "open-sans",
     fontSize: 24,
     margin: 21,
-
   },
 //текст під слоганом
 Image: {
@@ -147,7 +146,7 @@ shadowProp: {
    scrollView: { 
     flex: 1,
     width: '100%',
-    marginTop: 0,
+    marginTop: 110,
     marginBottom: 100,
     borderRadius: 30, 
   },
@@ -179,10 +178,10 @@ shadowProp: {
   scrollView2: {
     flex: 1,
     width: '100%',
-    marginTop: 0,
+    marginTop: 10,
     marginBottom: 120,
     borderRadius: 30,
-    marginTop: 120,
+    marginTop: 50,
   },
   AddZbirTitle: {
     paddingTop: 10,
@@ -290,7 +289,7 @@ shadowProp: {
 medContainer: {
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 110,
+    marginTop: 70,
   },
   scrollViewMedicalContent: {
     width: 370,
@@ -336,9 +335,8 @@ medContainer: {
   marginTop: 0,
 },
   // ZbirInfo page
-  ZbirInfoTitle:
-{
-    paddingTop: 50,
+  ZbirInfoTitle:{
+    paddingTop: 10,
     paddingHorizontal: 40,
     marginBottom: 20,
     alignSelf: "center",

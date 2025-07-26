@@ -9,7 +9,7 @@ export default function ProfileScreen() {
   const handleMyFundraisings = () => {
     Alert.alert(
       "My fundraisings",
-      "A list of all your fees will be displayed here",
+      "A list of all your Zbirs will be displayed here",
       [
         { text: "ОК", style: "default" }
       ]
@@ -19,7 +19,7 @@ export default function ProfileScreen() {
   const handleFundraisingReport = () => {
     Alert.alert(
       "Report fundrasings",
-      "Тут буде відображено детальний звіт по всіх зборах",
+      "A detailed report of all meetings will be displayed here.",
       [
         { text: "ОК", style: "default" }
       ]
@@ -39,7 +39,7 @@ export default function ProfileScreen() {
       </View>
 
       <View style={styles.infoSection}>
-        <Text style={styles.nameText}>Name and Surname</Text>
+        <Text style={styles.nameText}>John Shevchenko</Text>
 
         <View style={styles.statsContainer}>
           <View style={styles.statItem}>

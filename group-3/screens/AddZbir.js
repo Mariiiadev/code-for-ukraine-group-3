@@ -33,9 +33,9 @@ function InfoInput (props) {
 }
 
 const data = [
-        {label: 'Technique and equipment', value: '1'},
-        {label: 'Medical help', value: '2'},
-        {label: 'Support for the military', value: '3'},
+        {label: 'Техніка та обладнання', value: '1'},
+        {label: 'Медична допомога', value: '2'},
+        {label: 'Підтримка військових', value: '3'},
     ];
 
     const DropdownScreen = _props => {
@@ -53,10 +53,10 @@ const data = [
                     style={styles.dropdown}
                     data={data}
                     search
-                    searchPlaceholder="Search"
+                    searchPlaceholder="Пошук"
                     labelField="label"
                     valueField="value"
-                    placeholder="Select a category fundraising"
+                    placeholder="Оберіть категорію збору"
                     value={dropdown}
                     onChange={item => {
                     setDropdown(item.value);
@@ -77,18 +77,20 @@ export default function AddZdir () {
      <View>
       <ImageBackground source = {require('../assets/background.png')} style={styles.backgroundPic}> 
         <ScrollView style={styles.scrollView} >
-          <View style={styles.AddZbirTitle} >
-            <TitleText title={"Add zbir"} />
-          </View>
+          <View style={styles.AddZbirTitle2} >
+            <TitleText title={"Create Zbir"} />
+          </View>       
           <View style={styles.ImagePicker}> 
             <Image source={require("../assets/addPicture.webp")} style={styles.addImage} />
           </View>
-          <KeyboardAvoidingView style={styles.TextInputsContainer} behavior="padding" enabled>
-            <ParaghText content={"Zbir name:"} />
+          <View style={styles.TextInputsContainer} >
+            <ParaghText content={"Zbir Title:"} />
             <InfoInput />
             <View style={styles.dropdownContainer}>
               <DropdownScreen />
             </View>  
+            <ParaghText content={"Amount of Zbir (UAH):"} />
+            <InfoInput />
             <ParaghText content={"Description:"} />
             <TextInput 
             value={Description} 
@@ -99,14 +101,14 @@ export default function AddZdir () {
             multiline
             numberOfLines={4}
             />
-            <ParaghText content={"Link to the bank:"} />
+            <ParaghText content={"Link to MonoBanka:"} />
             <InfoInput />
             <View style={styles.addZbirButtonContainer}>
               <TouchableOpacity 
               onPress={() => {
-              navigation.reset}}
+              navigation.navigate('HomeStack')}}
               style={styles.addZbirButton}>
-                <Text style={[styles.buttonText]}>Створити збір</Text>
+                <Text style={[styles.buttonText]}>Create Zbir</Text>
               </TouchableOpacity>
             </View>
           </View>

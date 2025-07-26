@@ -24,13 +24,13 @@ export default function SignUp () {
             <Text style={[styles.login, {color: 'white', fontSize: 18}]}>First name:</Text>
             <TextInput style={styles.loginbar}
                 value={name}
-                onChangeText={setEmail}
+                onChangeText={setName}
                 placeholder={""}>
             </TextInput>
             <Text style={[styles.login, {color: 'white', fontSize: 18}]}>Last name:</Text>
             <TextInput style={styles.loginbar}
                 value={surname}
-                onChangeText={setEmail}
+                onChangeText={setSurname}
                 placeholder={""}>
             </TextInput>
             <Text style={[styles.login, {color: 'white', fontSize: 18}]}>Email:</Text>

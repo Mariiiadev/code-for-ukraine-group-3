@@ -38,9 +38,9 @@ export default function ZdirInfo () {
           <Image source = {require('../assets/backButton.png.png')} style={styles.backButtonImg} />
         </TouchableOpacity>
       </View>
-        <ScrollView style={styles.scrollView} >
+        <ScrollView style={styles.scrollView2} >
           <View style={styles.ZbirInfoTitle} >
-            <TitleText title={"Грім для ворогів"} />
+            <TitleText title={"Thunder for the enemy"} />
           </View> 
           <View style={styles.ImgTextContainer}>
             <View style={styles.ImagePicker}> 
@@ -48,29 +48,30 @@ export default function ZdirInfo () {
             </View>
             <View style={styles.TextContainer1}>
               <View style={styles.AuthZbir}>
-                <BoldTitle content={"Автор:"}/>
-                <ParaghText content={'БО "Крила"'}/>
+                <BoldTitle content={"Author:"}/>
+                <ParaghText content={'Hanna Bun'}/>
               </View>
               <View style={styles.Category}>
                 <BoldTitle content={"Категорія:"}/>
                 <ParaghText content={"Медична допомога"}/>
               </View> 
               <View style={styles.ZbirAim}>
-                <BoldTitle content={"Сума"}/>
-                <ParaghText content={"7 000"}/>
+                <BoldTitle content={"Amount:"}/>
+                <ParaghText content={"7 000 UAH"}/>
               </View>
             </View>
           </View> 
           
           <View style={styles.OtherTextCont}>
             <View style={styles.DescrCont}>
-              <BoldTitle content={"Опис:"}/>
-              <ParaghText content={'Дружній збір на коліматорний приціл для антидронової рушниці та апаратуру керування для FPV для 2-ої роти МВГ ДФТГ №8, в складі якої добровольці міста Суми, серед яких і тато одної з нас. Вони щоночі захищають Суми від шахедів.'}/>
+              <BoldTitle content={"Description:"}/>
+              <ParaghText content={'A friendly gathering for a collimator sight for an anti-drone rifle and FPV control equipment for the 2nd company of the MVG DFTG No. 8, which includes volunteers from the city of Sumy, including the father of one of us. They protect Sumy from the shaheeds every night.'}/>
             </View>
             <View style={styles.ZbirLinkCont}>
-              <BoldTitle content={"Посилання:"}/>
+              <BoldTitle content={"Link:"}/>
               <ParaghText content={"https://send.monobank.ua/jar/4TyMkkTXj8"}/>
             </View>
+
           </View>          
         </ScrollView>  
       </ImageBackground>
