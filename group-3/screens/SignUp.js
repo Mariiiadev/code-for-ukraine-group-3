@@ -12,7 +12,7 @@ export default function SignUp () {
     const [password, setPassword] = useState('');
     const navigation = useNavigation();
     return (
-        <ImageBackground source={require('../assets/background.png')} style={styles.image}>
+        <ImageBackground source={require('../assets/LogIn.png')} style={styles.image}>
         <View style={styles.container}>
     <View style={styles.hiContainer}>
             <Text style={[styles.hiText, { fontSize: 24}]}  >Вітаємо!</Text>

@@ -276,18 +276,20 @@ medContainer: {
   },
   scrollViewMedicalContent: {
     width: 370,
-    height: '70',
+    marginBottom: '30%',
   },
   medInfoContainer: {
-    padding: 20,
+    padding: 10,
     backgroundColor: '#efeeeeff',
     borderRadius: 20,
     margin: 25,
-    justifyContent: 'flex-start',
-    flexDirection: 'row',
     shadowColor: '#141414',
     elevation: 15,
   },
+  imagandtextContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },  
   medImage: {
     width: '40%',
     height: 120,
@@ -310,4 +312,10 @@ medContainer: {
     flexShrink: 1,
     flexWrap: 'wrap',
   },
+  progressbar: {
+  width: 300,
+  height: 24,
+  marginTop: 0,
+},
+
 });

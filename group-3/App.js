@@ -13,9 +13,22 @@ import AddZbir from "./screens/AddZbir";
 import LogIn from "./screens/LogIn";
 import SignUp from "./screens/SignUp";
 import MedicalHelp from "./screens/MedicalHelp";
+import Tech from "./screens/Tech";
+import SoldiersHelp from "./screens/SoldiersHelp";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
+
+function HomeStack() {
+  return (
+    <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Home">
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="MedicalHelp" component={MedicalHelp} />
+      <Stack.Screen name="Tech" component={Tech} />
+      <Stack.Screen name="SoldiersHelp" component={SoldiersHelp} />
+    </Stack.Navigator>
+  );
+}
 
 function MainTabs() {
   return (
@@ -52,7 +65,7 @@ function MainTabs() {
         },
       })}
     >
-      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Home" component={HomeStack} />
       <Tab.Screen name="AddZbir" component={AddZbir} />
       <Tab.Screen name="Profile" component={Profile} />
     </Tab.Navigator>
@@ -82,7 +95,6 @@ export default function App() {
       <StatusBar hidden={true} />
             <Stack.Navigator initialRouteName="LogIn" screenOptions={{ headerShown: false }}>
               <Stack.Screen name="SignUp" component={SignUp} />
-              <Stack.Screen name="MedicalHelp" component={MedicalHelp} />
               <Stack.Screen name="LogIn" component={LogIn} />
               <Stack.Screen name="MainTabs" component ={MainTabs} />
             </Stack.Navigator>
