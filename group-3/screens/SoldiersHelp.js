@@ -13,7 +13,7 @@ export default function SoldiersHelp() {
         <ImageBackground source={require('../assets/background.png')} style={styles.image}>
         <View style={styles.container}>
             <View style={styles.medContainer}>
-            <Text style={[styles.medText, { fontSize: 30, fontWeight: '500' }]}>Підтримка військових</Text>
+            <Text style={[styles.medText, { fontSize: 30, fontWeight: '500' }]}>Support for the military</Text>
             </View>
             <ScrollView style={styles.scrollViewMedicalContent}>
                 <TouchableOpacity
@@ -24,9 +24,9 @@ export default function SoldiersHelp() {
             <View style={styles.imagandtextContainer}>
                     <Image source={require('../assets/zbir2.1.png')} style={styles.medImage} />
                     <View style={styles.medInfoTextContainer}>
-                    <Text style={[styles.medInfoText, { fontWeight: '800' }]}> Збір на Автор </Text>
-                    <Text style={styles.medInfoText}> Автор: БО "Крила"</Text>
-                    <Text style={styles.medInfoText}> Сума: 100 000 грн</Text>
+                    <Text style={[styles.medInfoText, { fontWeight: '800' }]}> Author fee </Text>
+                    <Text style={styles.medInfoText}> Author: CO "Kryla"</Text>
+                    <Text style={styles.medInfoText}> Amount: 100 000 UAH</Text>
                     </View>
                     </View>
                 <Image source={require('../assets/progresbar65.png')} style={styles.progressbar} />
@@ -35,9 +35,9 @@ export default function SoldiersHelp() {
         <View style={styles.imagandtextContainer}>
                     <Image source={require('../assets/zbir2.2.png')} style={styles.medImage} />
                     <View style={styles.medInfoTextContainer}>
-                    <Text style={[styles.medInfoText, { fontWeight: '800' }]}> Спільник </Text>
-                    <Text style={styles.medInfoText}> Автор: БО "Крила"</Text>
-                    <Text style={styles.medInfoText}> Сума: 100 000 грн</Text>
+                    <Text style={[styles.medInfoText, { fontWeight: '800' }]}> Accomplice </Text>
+                    <Text style={styles.medInfoText}> Author: CO "Kryla"</Text>
+                    <Text style={styles.medInfoText}> Amount: 100 000 UAH</Text>
                     </View>
                     </View>
             <Image source={require('../assets/progresbar48.png')} style={styles.progressbar} />
@@ -46,9 +46,9 @@ export default function SoldiersHelp() {
         <View style={styles.imagandtextContainer}>
                     <Image source={require('../assets/zbir2.3.png')} style={styles.medImage} />
                     <View style={styles.medInfoTextContainer}>
-                    <Text style={[styles.medInfoText, { fontWeight: '800' }]}> Літо на Покровську </Text>
-                    <Text style={styles.medInfoText}> Автор: БО "Крила"</Text>
-                    <Text style={styles.medInfoText}> Сума: 100 000 грн</Text>
+                    <Text style={[styles.medInfoText, { fontWeight: '800' }]}> Summer in Pokrovsk </Text>
+                    <Text style={styles.medInfoText}> Author: CO "Kryla"</Text>
+                    <Text style={styles.medInfoText}> Amount: 100 000 UAH</Text>
                     </View>
                     </View>
                 <Image source={require('../assets/progresbar12.png')} style={styles.progressbar} />
@@ -57,9 +57,9 @@ export default function SoldiersHelp() {
         <View style={styles.imagandtextContainer}>
                     <Image source={require('../assets/zbir2.4.png')} style={styles.medImage} />
                     <View style={styles.medInfoTextContainer}>
-                    <Text style={[styles.medInfoText, { fontWeight: '800' }]}> Літо на Покровську </Text>
-                    <Text style={styles.medInfoText}> Автор: БО "Крила"</Text>
-                    <Text style={styles.medInfoText}> Сума: 100 000 грн</Text>
+                    <Text style={[styles.medInfoText, { fontWeight: '800' }]}> Summer in Pokrovsk </Text>
+                    <Text style={styles.medInfoText}> Author: CO "Kryla"</Text>
+                    <Text style={styles.medInfoText}> Amount: 100 000 UAH</Text>
                     </View>
                     </View>
                 <Image source={require('../assets/progresbar0.png')} style={styles.progressbar} />

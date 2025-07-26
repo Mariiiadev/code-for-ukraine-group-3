@@ -15,31 +15,31 @@ export default function SignUp () {
         <ImageBackground source={require('../assets/LogIn.png')} style={styles.image}>
         <View style={styles.container}>
     <View style={styles.hiContainer}>
-            <Text style={[styles.hiText, { fontSize: 24}]}  >Вітаємо!</Text>
+            <Text style={[styles.hiText, { fontSize: 24}]}  >Welcome!</Text>
             <Image
             style={styles.logo}
             source={require('../assets/logo.png')}/>
         </View>
     <View style={styles.loginContainer}>
-            <Text style={[styles.login, {color: 'white', fontSize: 18}]}>Ім'я:</Text>
+            <Text style={[styles.login, {color: 'white', fontSize: 18}]}>First name:</Text>
             <TextInput style={styles.loginbar}
                 value={name}
                 onChangeText={setEmail}
                 placeholder={""}>
             </TextInput>
-            <Text style={[styles.login, {color: 'white', fontSize: 18}]}>Прізвище:</Text>
+            <Text style={[styles.login, {color: 'white', fontSize: 18}]}>Last name:</Text>
             <TextInput style={styles.loginbar}
                 value={surname}
                 onChangeText={setEmail}
                 placeholder={""}>
             </TextInput>
-            <Text style={[styles.login, {color: 'white', fontSize: 18}]}>Електронна адреса:</Text>
+            <Text style={[styles.login, {color: 'white', fontSize: 18}]}>Email:</Text>
             <TextInput style={styles.loginbar}
                 value={email}
                 onChangeText={setEmail}
                 placeholder={""}>
             </TextInput>
-            <Text style={[styles.login, {color: 'white', fontSize: 18}]}>Пароль:</Text>
+            <Text style={[styles.login, {color: 'white', fontSize: 18}]}>Password:</Text>
             <TextInput style={styles.loginbar}
                 value={password}
                 onChangeText={setPassword}
@@ -50,9 +50,9 @@ export default function SignUp () {
             onPress={() => {
             navigation.navigate("MainTabs")}}
             style={[styles.StartButton, { backgroundColor: '#F7C051', marginTop: 10 }]}>
-            <Text style={{ color: 'black', fontWeight: '600', fontSize: 16 }}>Далі</Text>
+            <Text style={{ color: 'black', fontWeight: '600', fontSize: 16 }}>Next</Text>
         </TouchableOpacity>
-            <Text style={[styles.signupText, { fontSize: 17}]}>  Маєте акаунт?</Text>
+            <Text style={[styles.signupText, { fontSize: 17}]}>  Do you have an account?</Text>
         <TouchableOpacity
             onPress={() => { 
                 Keyboard.dismiss();
