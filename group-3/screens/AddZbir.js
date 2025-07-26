@@ -76,8 +76,8 @@ export default function AddZdir () {
     <View style={styles.AddZbircontainer}>
      <View>
       <ImageBackground source = {require('../assets/background.png')} style={styles.backgroundPic}> 
-        <ScrollView style={styles.scrollView} >
-          <View style={styles.AddZbirTitle} >
+        <ScrollView style={styles.scrollView2} >
+          <View style={styles.AddZbirTitle2} >
             <TitleText title={"Створити збір"} />
           </View>       
           <View style={styles.ImagePicker}> 
@@ -106,7 +106,7 @@ export default function AddZdir () {
             <View style={styles.addZbirButtonContainer}>
               <TouchableOpacity 
               onPress={() => {
-              navigation.navigate("Home")}}
+              navigation.reset}}
               style={styles.addZbirButton}>
                 <Text style={[styles.buttonText]}>Створити збір</Text>
               </TouchableOpacity>

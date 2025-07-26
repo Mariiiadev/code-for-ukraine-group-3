@@ -30,13 +30,21 @@ export default function ZdirInfo () {
   return (
     <View style={styles.AddZbircontainer}>
       <ImageBackground source = {require('../assets/background.png')} style={styles.backgroundPic}> 
+      <View style={styles.backButtonCont}>
+        <TouchableOpacity style={styles.backButton}
+        onPress={() => { 
+        navigation.goBack();
+        }}>
+          <Image source = {require('../assets/backButton.png.png')} style={styles.backButtonImg} />
+        </TouchableOpacity>
+      </View>
         <ScrollView style={styles.scrollView} >
           <View style={styles.ZbirInfoTitle} >
             <TitleText title={"Грім для ворогів"} />
           </View> 
           <View style={styles.ImgTextContainer}>
             <View style={styles.ImagePicker}> 
-              <Image source={require("../assets/addPicture.webp")} style={styles.ZbirInfoImg} />
+              <Image source={require("../assets/zbir3.1.png")} style={styles.ZbirInfoImg} />
             </View>
             <View style={styles.TextContainer1}>
               <View style={styles.AuthZbir}>
@@ -49,7 +57,7 @@ export default function ZdirInfo () {
               </View> 
               <View style={styles.ZbirAim}>
                 <BoldTitle content={"Сума"}/>
-                <ParaghText content={"100 000"}/>
+                <ParaghText content={"7 000"}/>
               </View>
             </View>
           </View> 

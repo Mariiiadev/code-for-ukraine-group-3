@@ -27,6 +27,7 @@ function HomeStack() {
       <Stack.Screen name="MedicalHelp" component={MedicalHelp} />
       <Stack.Screen name="Tech" component={Tech} />
       <Stack.Screen name="SoldiersHelp" component={SoldiersHelp} />
+      <Stack.Screen name="ZbirInfo" component={ZbirInfo} />
     </Stack.Navigator>
   );
 }
@@ -39,7 +40,7 @@ function MainTabs() {
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
 
-          if (route.name === 'Home') {
+          if (route.name === 'HomeStack') {
             iconName = focused ? 'home' : 'home-outline';
           } else if (route.name === 'AddZbir') {
             iconName = focused ? 'add-circle' : 'add-circle-outline';
@@ -66,7 +67,7 @@ function MainTabs() {
         },
       })}
     >
-      <Tab.Screen name="Home" component={HomeStack} />
+      <Tab.Screen name="HomeStack" component={HomeStack} />
       <Tab.Screen name="AddZbir" component={AddZbir} />
       <Tab.Screen name="Profile" component={Profile} />
     </Tab.Navigator>
@@ -96,7 +97,6 @@ export default function App() {
               <Stack.Screen name="SignUp" component={SignUp} />
               <Stack.Screen name="LogIn" component={LogIn} />
               <Stack.Screen name="MainTabs" component ={MainTabs} />
-              <Stack.Screen name="ZbirInfo" component={ZbirInfo} />
             </Stack.Navigator>
     </NavigationContainer>
   );
