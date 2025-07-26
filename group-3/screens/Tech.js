@@ -9,7 +9,15 @@ export default function Tech() {
     const alert = Alert;
     const navigation = useNavigation();
     return (
-        <ImageBackground source={require('../assets/background.png')} style={styles.image}>
+        <ImageBackground source={require('../assets/background.png')} style={styles.image}> 
+              <View style={styles.backButtonCont}>
+                <TouchableOpacity style={styles.backButton}
+                onPress={() => { 
+                navigation.goBack();
+                }}>
+                  <Image source = {require('../assets/backButton.png.png')} style={styles.backButtonImg} />
+                </TouchableOpacity>
+              </View>
         <View style={styles.container}>
             <View style={styles.medContainer}>
             <Text style={[styles.medText, { fontSize: 30, fontWeight: '500' }]}>Machinery and equipment</Text>
@@ -17,15 +25,15 @@ export default function Tech() {
             <ScrollView style={styles.scrollViewMedicalContent}>
                 <TouchableOpacity
                 onPress={() => {
-                    alert.alert('This is a medical help item!');
+                navigation.navigate("ZbirInfo")
                 }}>
         <View style={styles.medInfoContainer}>
         <View style={styles.imagandtextContainer}>
                     <Image source={require('../assets/zbir3.1.png')} style={styles.medImage} />
                     <View style={styles.medInfoTextContainer}>
                     <Text style={[styles.medInfoText, { fontWeight: '800' }]}> Thunder for the enemy </Text>
-                    <Text style={styles.medInfoText}> Author: CO "Kryla"</Text>
-                    <Text style={styles.medInfoText}> Amount: 100 000 UAH</Text>
+                    <Text style={styles.medInfoText}> Author: Ганна Бун</Text>
+                    <Text style={styles.medInfoText}> Amount: 7 000 UAH</Text>
                     </View>
                     </View>
                 <Image source={require('../assets/progresbar48.png')} style={styles.progressbar} />

@@ -16,7 +16,15 @@ export default function MedicalHelp() {
     const alert = Alert;
     const navigation = useNavigation();
     return (
-        <ImageBackground source={require('../assets/background.png')} style={styles.image}>
+        <ImageBackground source={require('../assets/background.png')} style={styles.image}> 
+              <View style={styles.backButtonCont}>
+                <TouchableOpacity style={styles.backButton}
+                onPress={() => { 
+                navigation.goBack();
+                }}>
+                  <Image source = {require('../assets/backButton.png.png')} style={styles.backButtonImg} />
+                </TouchableOpacity>
+              </View>
         <View style={styles.container}>
             <View style={styles.medContainer}>
             <Text style={[styles.medText, { fontSize: 30, fontWeight: '500' }]}>Medical Help</Text>

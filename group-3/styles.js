@@ -147,7 +147,7 @@ shadowProp: {
    scrollView: { 
     flex: 1,
     width: '100%',
-    marginTop: 120,
+    marginTop: 0,
     marginBottom: 100,
     borderRadius: 30, 
   },
@@ -176,11 +176,26 @@ shadowProp: {
     borderRadius: 15,
     borderBottomColor: 'grey',
   },
+  scrollView2: {
+    flex: 1,
+    width: '100%',
+    marginTop: 0,
+    marginBottom: 120,
+    borderRadius: 30,
+    marginTop: 120,
+  },
   AddZbirTitle: {
     paddingTop: 10,
     marginBottom: 10,
     alignSelf: "center",
     paddingBottom: 1,
+  },
+  AddZbirTitle2: {
+    paddingTop: 10,
+    marginBottom: 10,
+    alignSelf: "center",
+    paddingBottom: 1,
+
   },
   ImagePicker: {
     marginBottom: 10,
@@ -323,9 +338,9 @@ medContainer: {
   // ZbirInfo page
   ZbirInfoTitle:
 {
-    paddingTop: 10,
+    paddingTop: 50,
     paddingHorizontal: 40,
-    marginBottom: 10,
+    marginBottom: 20,
     alignSelf: "center",
     paddingBottom: 1,
 },
@@ -334,11 +349,13 @@ medContainer: {
     flexDirection: 'row',
     justifyContent:'space-between',
     marginHorizontal: 10, 
+    paddingLeft: 20,
   },
   TextContainer1:{
       flex: 1,
       flexDirection: 'column',
-      justifyContent: 'flex-start'
+      justifyContent: 'flex-start',
+      marginLeft: 20,
   },
   AuthZbir: {
   },
@@ -355,7 +372,7 @@ medContainer: {
   },
   ZbirInfoImg: {
     borderRadius: 15,
-    width: 200,
+    width: 170,
     height: 200,
   },
   OtherTextCont: {
@@ -366,5 +383,21 @@ medContainer: {
   },
   ZbirLinkCont: {
 
+  },
+  backButtonCont: {
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    width: "100%",
+    paddingLeft: 30,
+    paddingTop: 30,
+  },
+  backButton:{
+    alignSelf: 'flex-start',
+    // width: 40,
+    height: 40,
+  },
+  backButtonImg: {
+    width: 40,
+    height: 40,
   },
 });

@@ -104,7 +104,7 @@ export default function AddZdir () {
             <View style={styles.addZbirButtonContainer}>
               <TouchableOpacity 
               onPress={() => {
-              navigation.navigate("Home")}}
+              navigation.reset}}
               style={styles.addZbirButton}>
                 <Text style={[styles.buttonText]}>Створити збір</Text>
               </TouchableOpacity>
